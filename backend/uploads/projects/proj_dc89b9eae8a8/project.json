@@ -1,0 +1,319 @@
+{
+  "project_id": "proj_dc89b9eae8a8",
+  "name": "Unnamed Project",
+  "status": "failed",
+  "created_at": "2026-03-19T10:50:28.685642",
+  "updated_at": "2026-03-19T10:51:16.859245",
+  "files": [
+    {
+      "filename": "新建 PPTX 演示文稿.pdf",
+      "size": 2827155
+    }
+  ],
+  "total_text_length": 27,
+  "ontology": {
+    "entity_types": [
+      {
+        "name": "StartupFounder",
+        "description": "Founding individual of a tech startup, often publicly visible and active in pre-IPO communications",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Legal or commonly used full name of the founder"
+          },
+          {
+            "name": "role",
+            "type": "text",
+            "description": "Specific founding role (e.g., CEO, CTO, co-founder)"
+          }
+        ],
+        "examples": [
+          "Zhang Wei",
+          "Li Mei"
+        ]
+      },
+      {
+        "name": "VentureCapitalFirm",
+        "description": "Private equity firm investing in pre-IPO startups; actively shapes narrative via statements and g...",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Official registered or branded name of the VC firm"
+          },
+          {
+            "name": "investment_stage_focus",
+            "type": "text",
+            "description": "Primary stage of investment (e.g., Series B, growth equity)"
+          }
+        ],
+        "examples": [
+          "Sequoia Capital China",
+          "IDG Capital"
+        ]
+      },
+      {
+        "name": "SecuritiesRegulator",
+        "description": "Government or quasi-government body overseeing IPO filings and market conduct",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Formal institutional name (e.g., CSRC, SEC)"
+          },
+          {
+            "name": "jurisdiction",
+            "type": "text",
+            "description": "Geographic or regulatory scope (e.g., PRC, US)"
+          }
+        ],
+        "examples": [
+          "China Securities Regulatory Commission",
+          "U.S. Securities and Exchange Commission"
+        ]
+      },
+      {
+        "name": "TechMediaOutlet",
+        "description": "Digital-first media organization specializing in technology business news and IPO analysis",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Brand name of the media outlet"
+          },
+          {
+            "name": "coverage_focus",
+            "type": "text",
+            "description": "Primary domain of reporting (e.g., cloud infrastructure, enterprise SaaS)"
+          }
+        ],
+        "examples": [
+          "36Kr",
+          "TechCrunch"
+        ]
+      },
+      {
+        "name": "InstitutionalInvestor",
+        "description": "Large financial entity (e.g., mutual fund, pension fund) evaluating pre-IPO companies for allocation",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Official name of the institutional investor"
+          },
+          {
+            "name": "asset_class_focus",
+            "type": "text",
+            "description": "Primary investment category (e.g., public equities, private growth)"
+          }
+        ],
+        "examples": [
+          "ChinaAMC",
+          "BlackRock"
+        ]
+      },
+      {
+        "name": "IndustryAnalyst",
+        "description": "Research professional publishing third-party assessments on tech firms’ fundamentals and IPO read...",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Name of the analyst"
+          },
+          {
+            "name": "affiliation",
+            "type": "text",
+            "description": "Employing research firm or independent status"
+          }
+        ],
+        "examples": [
+          "Wang Jian",
+          "Chen Lin"
+        ]
+      },
+      {
+        "name": "CloudInfrastructureProvider",
+        "description": "Public cloud vendor or data center operator that may be a customer, partner, or competitive bench...",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Company name of the infrastructure provider"
+          },
+          {
+            "name": "service_model",
+            "type": "text",
+            "description": "Core offering (e.g., IaaS, colocation, hybrid cloud)"
+          }
+        ],
+        "examples": [
+          "Alibaba Cloud",
+          "China Telecom Cloud"
+        ]
+      },
+      {
+        "name": "EnterpriseCustomer",
+        "description": "B2B client using the startup’s services; their public endorsements or usage signals influence cre...",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Name of the corporate customer"
+          },
+          {
+            "name": "industry_sector",
+            "type": "text",
+            "description": "Customer’s primary industry (e.g., finance, healthcare, manufacturing)"
+          }
+        ],
+        "examples": [
+          "Bank of Communications",
+          "Huawei Technologies"
+        ]
+      },
+      {
+        "name": "Person",
+        "description": "Any natural person not covered by more specific types (e.g., anonymous commenter, freelance write...",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Given name or pseudonym used publicly"
+          },
+          {
+            "name": "platform_handle",
+            "type": "text",
+            "description": "Social media username or account identifier"
+          }
+        ],
+        "examples": [
+          "@TechWatcher2023",
+          "Anonymous Investor"
+        ]
+      },
+      {
+        "name": "Organization",
+        "description": "Any formal group not fitting specific organizational types (e.g., industry alliance, temporary co...",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Official or commonly recognized name"
+          },
+          {
+            "name": "formation_type",
+            "type": "text",
+            "description": "Legal or functional nature (e.g., association, joint venture, non-profit)"
+          }
+        ],
+        "examples": [
+          "Shanghai AI Industry Alliance",
+          "Guangdong Data Center Operators Group"
+        ]
+      }
+    ],
+    "edge_types": [
+      {
+        "name": "FOUNDED",
+        "description": "A person founded the startup",
+        "source_targets": [
+          {
+            "source": "StartupFounder",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "INVESTED_IN",
+        "description": "VC firm provided capital to the startup",
+        "source_targets": [
+          {
+            "source": "VentureCapitalFirm",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "REGULATES_FILING",
+        "description": "Regulator oversees or reviews the IPO application",
+        "source_targets": [
+          {
+            "source": "SecuritiesRegulator",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "REPORTS_ON",
+        "description": "Media outlet publishes coverage about the startup’s IPO journey",
+        "source_targets": [
+          {
+            "source": "TechMediaOutlet",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "EVALUATES",
+        "description": "Analyst or institutional investor assesses the startup’s valuation or risk profile",
+        "source_targets": [
+          {
+            "source": "IndustryAnalyst",
+            "target": "Organization"
+          },
+          {
+            "source": "InstitutionalInvestor",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "USES_SERVICE_OF",
+        "description": "Enterprise customer deploys or references the startup’s technology",
+        "source_targets": [
+          {
+            "source": "EnterpriseCustomer",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "PARTNERS_WITH",
+        "description": "Strategic collaboration between infrastructure provider and startup",
+        "source_targets": [
+          {
+            "source": "CloudInfrastructureProvider",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "COMMENTED_ON",
+        "description": "Person posted public commentary (e.g., on social media or forums) about the IPO",
+        "source_targets": [
+          {
+            "source": "Person",
+            "target": "Organization"
+          }
+        ],
+        "attributes": []
+      }
+    ]
+  },
+  "analysis_summary": "文本聚焦于‘有孚’（假设为一家拟上市的中国云/数据中心科技公司）上市前的舆论生态。需建模的关键发声主体包括：创始人、投资方（VC）、监管机构（如CSRC）、科技媒体、机构投资者、行业分析师、云基础设施同业/合作伙伴、企业客户。这些角色在IPO前期通过融资披露、监管问询、媒体报道、研报发布、客户背书等行为共同塑造舆论走向。兜底类型Person和Organization确保覆盖未明确归类的个体与组织，符合社交媒体模拟中长尾主体的表达需求。",
+  "graph_id": null,
+  "graph_build_task_id": "805da99e-888a-40ea-a3bd-b629dadca2c3",
+  "simulation_requirement": "分析一下有孚在上市前的舆论走向\r\n",
+  "chunk_size": 500,
+  "chunk_overlap": 50,
+  "error": "headers: {'date': 'Thu, 19 Mar 2026 14:51:16 GMT', 'content-type': 'text/plain; charset=utf-8', 'content-length': '13', 'connection': 'keep-alive', 'vary': 'Origin', 'x-content-type-options': 'nosniff', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'cf-cache-status': 'DYNAMIC', 'server': 'cloudflare', 'cf-ray': '9ded4b5529568b8a-SIN'}, status_code: 401, body: unauthorized\n"
+}

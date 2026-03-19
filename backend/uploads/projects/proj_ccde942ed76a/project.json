@@ -1,0 +1,342 @@
+{
+  "project_id": "proj_ccde942ed76a",
+  "name": "Unnamed Project",
+  "status": "graph_completed",
+  "created_at": "2026-03-19T11:02:54.836997",
+  "updated_at": "2026-03-19T11:03:55.362206",
+  "files": [
+    {
+      "filename": "新建 PPTX 演示文稿.pdf",
+      "size": 2827155
+    }
+  ],
+  "total_text_length": 27,
+  "ontology": {
+    "entity_types": [
+      {
+        "name": "Company",
+        "description": "A for-profit business entity seeking or having undergone IPO, with public market exposure",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Official registered name of the company"
+          },
+          {
+            "name": "industry_sector",
+            "type": "text",
+            "description": "Primary industry classification (e.g., cloud infrastructure, data center)"
+          },
+          {
+            "name": "ipo_status",
+            "type": "text",
+            "description": "Current IPO phase: 'pre-filing', 'in-review', 'post-IPO', or 'abandoned'"
+          }
+        ],
+        "examples": [
+          "Youfu Cloud Co., Ltd.",
+          "Alibaba Group",
+          "JD.com"
+        ]
+      },
+      {
+        "name": "RegulatoryAgency",
+        "description": "Government or quasi-government body responsible for securities oversight and IPO approval",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Official name of the regulatory authority"
+          },
+          {
+            "name": "jurisdiction",
+            "type": "text",
+            "description": "Geographic or functional scope (e.g., 'China', 'CSRC')"
+          }
+        ],
+        "examples": [
+          "China Securities Regulatory Commission (CSRC)",
+          "Shanghai Stock Exchange",
+          "Securities and Exchange Commission (SEC)"
+        ]
+      },
+      {
+        "name": "MediaOutlet",
+        "description": "News organization or digital platform publishing IPO-related coverage and analysis",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Name of the media brand or publication"
+          },
+          {
+            "name": "media_type",
+            "type": "text",
+            "description": "Format: 'financial_news', 'social_media', 'state_media', 'independent_blog'"
+          }
+        ],
+        "examples": [
+          "Caixin Global",
+          "Yicai Global",
+          "Jiemian News",
+          "Weibo Official Accounts"
+        ]
+      },
+      {
+        "name": "InvestmentBank",
+        "description": "Financial institution acting as underwriter, advisor, or sponsor in IPO process",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Full legal or commonly recognized name"
+          },
+          {
+            "name": "role_in_ipo",
+            "type": "text",
+            "description": "Specific function: 'lead_underwriter', 'joint_bookrunner', 'financial_advisor'"
+          }
+        ],
+        "examples": [
+          "CICC",
+          "China Merchants Securities",
+          "Goldman Sachs (Asia)",
+          "HSBC"
+        ]
+      },
+      {
+        "name": "Shareholder",
+        "description": "Entity or individual holding significant equity stake pre-IPO, influencing narrative and credibility",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Legal or publicly known name of shareholder"
+          },
+          {
+            "name": "shareholding_percentage",
+            "type": "text",
+            "description": "Approximate equity stake held (e.g., '28.5%')"
+          }
+        ],
+        "examples": [
+          "Tencent Holdings",
+          "IDG Capital",
+          "Founding Team",
+          "State-owned Asset Supervision Commission"
+        ]
+      },
+      {
+        "name": "IndustryAnalyst",
+        "description": "Professional researcher or commentator providing expert assessment on company fundamentals and se...",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Name of analyst or research lead"
+          },
+          {
+            "name": "affiliation",
+            "type": "text",
+            "description": "Institutional base (e.g., 'CCID Consulting', 'Gartner')"
+          }
+        ],
+        "examples": [
+          "Zhang Wei, CCID Cloud Infrastructure Analyst",
+          "Li Na, iResearch Senior Tech Analyst"
+        ]
+      },
+      {
+        "name": "PublicFigure",
+        "description": "Influential individual (e.g., founder, CEO, spokesperson) whose statements directly shape IPO per...",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Legal or widely used public name"
+          },
+          {
+            "name": "title",
+            "type": "text",
+            "description": "Formal role at the company or in public discourse"
+          }
+        ],
+        "examples": [
+          "Wang Jian, Founder & CEO of Youfu Cloud",
+          "Chen Lin, Former CTO and Public Spokesperson"
+        ]
+      },
+      {
+        "name": "InstitutionalInvestor",
+        "description": "Professional investment entity evaluating and potentially subscribing to IPO shares",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Name of fund, insurance company, or sovereign wealth fund"
+          },
+          {
+            "name": "investment_focus",
+            "type": "text",
+            "description": "Sector or strategy alignment (e.g., 'tech infrastructure', 'ESG-aligned')"
+          }
+        ],
+        "examples": [
+          "China Life Insurance Asset Management",
+          "National Social Security Fund",
+          "Temasek Holdings"
+        ]
+      },
+      {
+        "name": "Person",
+        "description": "Any natural person not covered by more specific types (e.g., anonymous netizens, commentators, em...",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Real or pseudonymous identifier used publicly"
+          },
+          {
+            "name": "role",
+            "type": "text",
+            "description": "Contextual identity (e.g., 'former employee', 'retail investor', 'online commentator')"
+          }
+        ],
+        "examples": [
+          "@CloudWatcher2023",
+          "Anonymous whistleblower",
+          "Retail investor Zhang San"
+        ]
+      },
+      {
+        "name": "Organization",
+        "description": "Any formal group not captured by more specific organizational types (e.g., trade associations, th...",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Recognized name of the entity"
+          },
+          {
+            "name": "purpose",
+            "type": "text",
+            "description": "Stated mission or operational focus"
+          }
+        ],
+        "examples": [
+          "China Data Center Alliance",
+          "Digital Economy Think Tank",
+          "Tech Ethics Coalition"
+        ]
+      }
+    ],
+    "edge_types": [
+      {
+        "name": "SUBMITS_TO",
+        "description": "Company submits IPO application or materials to regulatory agency",
+        "source_targets": [
+          {
+            "source": "Company",
+            "target": "RegulatoryAgency"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "REPORTS_ON",
+        "description": "Media outlet publishes news, analysis, or opinion about the company's IPO",
+        "source_targets": [
+          {
+            "source": "MediaOutlet",
+            "target": "Company"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "ADVISES_ON",
+        "description": "Investment bank provides underwriting, valuation, or procedural guidance for IPO",
+        "source_targets": [
+          {
+            "source": "InvestmentBank",
+            "target": "Company"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "HOLDS_STAKE_IN",
+        "description": "Shareholder owns equity in the company prior to IPO",
+        "source_targets": [
+          {
+            "source": "Shareholder",
+            "target": "Company"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "ANALYZES",
+        "description": "Industry analyst issues research or commentary on company’s financials, tech, or market position",
+        "source_targets": [
+          {
+            "source": "IndustryAnalyst",
+            "target": "Company"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "REPRESENTS",
+        "description": "Public figure serves as official voice or symbolic representative of the company",
+        "source_targets": [
+          {
+            "source": "PublicFigure",
+            "target": "Company"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "EVALUATES_FOR_INVESTMENT",
+        "description": "Institutional investor conducts due diligence and considers subscription to IPO",
+        "source_targets": [
+          {
+            "source": "InstitutionalInvestor",
+            "target": "Company"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "COMMENTED_ON",
+        "description": "Person posts public commentary (e.g., on social media) regarding IPO credibility or risks",
+        "source_targets": [
+          {
+            "source": "Person",
+            "target": "Company"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "AFFILIATED_WITH",
+        "description": "Organization collaborates with, advises, or is formally linked to the company (non-equity)",
+        "source_targets": [
+          {
+            "source": "Organization",
+            "target": "Company"
+          }
+        ],
+        "attributes": []
+      }
+    ]
+  },
+  "analysis_summary": "文本聚焦于有孚公司（Youfu Cloud）上市前的舆论环境，核心涉及IPO主体、监管方、媒体、投行、股东、分析师、创始人/高管、机构投资者等可发声实体。设计严格遵循‘现实主体’原则：所有类型均为能在社交媒体或公开渠道主动表态、发布内容、影响舆论的角色。兜底类型Person和Organization确保覆盖未被具体归类的个体与组织，符合模拟系统扩展性需求。",
+  "graph_id": "mirofish_e48cedeec25c4fa1",
+  "graph_build_task_id": "9abc687e-140f-4c4b-b43b-e833ae038e56",
+  "simulation_requirement": "帮助看看有孚公司上市前的舆论导向和应对机制",
+  "chunk_size": 500,
+  "chunk_overlap": 50,
+  "error": null
+}

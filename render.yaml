@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: mirofish-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python run.py
+    envVars:
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_BASE_URL
+        value: https://dashscope.aliyuncs.com/compatible-mode/v1
+      - key: LLM_MODEL_NAME
+        value: qwen-plus
+      - key: ZEP_API_KEY
+        sync: false
+      - key: PORT
+        value: 10000
+    plan: free
