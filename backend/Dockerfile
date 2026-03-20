@@ -1,30 +1,46 @@
-# Multi-stage build to reduce image size
-FROM python:3.11-slim AS builder
+FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install build dependencies
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements and install to a virtual environment
+# Copy requirements
 COPY requirements.txt .
-RUN python -m venv /opt/venv && \
-    /opt/venv/bin/pip install --no-cache-dir --upgrade pip && \
-    /opt/venv/bin/pip install --no-cache-dir -r requirements.txt
 
-# Final stage - slim runtime image
-FROM python:3.11-slim AS runtime
+# Install all packages EXCEPT camel-ai and camel-oasis first
+RUN pip install --no-cache-dir \
+    flask>=3.0.0 \
+    flask-cors>=6.0.0 \
+    openai>=1.0.0 \
+    "zep-cloud==3.13.0" \
+    PyMuPDF>=1.24.0 \
+    charset-normalizer>=3.0.0 \
+    chardet>=5.0.0 \
+    python-dotenv>=1.0.0 \
+    "pydantic>=2.0.0"
 
-WORKDIR /app
+# Install camel-oasis without its heavy optional dependencies
+RUN pip install --no-cache-dir --no-deps "camel-oasis==0.2.5"
 
-# Copy virtual environment from builder
-COPY --from=builder /opt/venv /opt/venv
+# Install camel-ai without PyTorch and other heavy optional deps
+RUN pip install --no-cache-dir --no-deps "camel-ai==0.2.78"
 
-# Set PATH to use venv
-ENV PATH="/opt/venv/bin:$PATH"
+# Install only the required runtime deps for camel-ai
+RUN pip install --no-cache-dir \
+    astor \
+    colorama \
+    docstring-parser \
+    httpx \
+    jsonschema \
+    mcp \
+    pillow \
+    psutil \
+    tiktoken \
+    websockets
 
 # Copy application code
 COPY . .
